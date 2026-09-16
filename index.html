@@ -3,36 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ธนาวดี</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #FFCCCC;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        h1 { color: #2c3e50; }
-        p { font-size: 18px; line-height: 1.6; }
-    </style>
+
+    <title>Portfolio | ธนาวดี ไกรนอก</title>
+
+    <!-- เชื่อมต่อไฟล์ตกแต่ง -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน 👋</h1>
-        <p>สวัสดีค่ะ! ฉันชื่อ <strong>ธนาวดี (Thanawadee)</strong></p>
-        <p>ขณะนี้กำลังศึกษา/สนใจด้าน Chinese Program</p>
-        <p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
-        <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
-    </div>
+    <!-- ================= เมนูด้านบน ================= -->
+    <nav class="navbar">
+
+        <div class="logo">
+            My Portfolio 🩵
+        </div>
+
+        <div class="menu">
+            <a href="index.html">🩵 หน้าแรก</a>
+            <a href="about.html">👧🏻 เกี่ยวกับฉัน</a>
+            <a href="activity.html">📖 กิจกรรม</a>
+            <a href="contact.html">📞 ติดต่อ</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= หน้าแรก ================= -->
+    <main class="home">
+
+        <h1>
+            ยินดีต้อนรับสู่แฟ้มสะสมผลงาน
+        </h1>
+
+        <p class="subtitle">
+            Welcome to my Portfolio 💗
+        </p>
+
+
+        <!-- ช่องใส่รูปภาพ -->
+        <div class="image-box">
+            <img src="images/home.jpg" alt="รูปภาพหน้าแรก">
+        </div>
+
+
+        <div class="intro">
+
+            <p>สวัสดีค่ะ 🌷</p>
+
+            <p>
+                ดิฉัน นางสาว ธนาวดี ไกรนอก
+            </p>
+
+            <p>
+                นี่คือ Portfolio ของดิฉันค่ะ
+                รวบรวมผลงาน และเรื่องราวต่าง ๆ ค่ะ 👧🏻
+            </p>
+
+        </div>
+
+
+        <!-- ปุ่มไปหน้า About -->
+        <a href="about.html" class="next-button">
+            มารู้จักฉันกันเถอะ 💕 →
+        </a>
+
+    </main>
+
+
+    <!-- ================= ส่วนท้าย ================= -->
+    <footer>
+        <p>© 2026 Thanawadee Krainok 💗</p>
+    </footer>
 
 </body>
 </html>
