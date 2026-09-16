@@ -1,0 +1,660 @@
+/* ==================================================
+   ตั้งค่าพื้นฐานของเว็บไซต์
+================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ตัวเว็บไซต์ */
+
+body {
+
+    font-family:
+        "Arial",
+        "Tahoma",
+        sans-serif;
+
+    background: #fff5fa;
+
+    color: #555;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   เมนูด้านบน
+================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 18px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px rgba(255, 150, 190, 0.15);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* ชื่อ Portfolio */
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #73cde5;
+
+}
+
+
+/* กลุ่มเมนู */
+
+.menu {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+/* ปุ่มแต่ละหน้า */
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #777;
+
+    background: #fff0f7;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+/* เวลาเอาเมาส์ไปวาง */
+
+.menu a:hover {
+
+    background: #ffc7df;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==================================================
+   เนื้อหาทุกหน้า
+================================================== */
+
+main {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   หน้าแรก
+================================================== */
+
+.home h1 {
+
+    font-size: 40px;
+
+    color: #ee8fbb;
+
+    margin-bottom: 5px;
+
+}
+
+
+.subtitle {
+
+    color: #9bd8e8;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==================================================
+   กล่องรูปสี่เหลี่ยม
+================================================== */
+
+.image-box {
+
+    width: 300px;
+
+    height: 300px;
+
+    margin: 25px auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    padding: 8px;
+
+    box-shadow:
+        0 10px 30px rgba(240, 145, 185, 0.2);
+
+}
+
+
+/* รูป */
+
+.image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+}
+
+
+/* ==================================================
+   ข้อความแนะนำตัว
+================================================== */
+
+.intro {
+
+    background: white;
+
+    padding: 25px;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(230, 150, 190, 0.15);
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   ปุ่มไปหน้าอื่น
+================================================== */
+
+.next-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    background: #f5a8ca;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 15px rgba(240, 140, 180, 0.25);
+
+    transition: 0.3s;
+
+}
+
+
+.next-button:hover {
+
+    background: #77cfe5;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==================================================
+   หัวข้อของหน้า
+================================================== */
+
+.page-title {
+
+    display: inline-block;
+
+    color: #ee8fbb;
+
+    background: #fff;
+
+    padding: 10px 30px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 20px rgba(230, 140, 180, 0.15);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==================================================
+   หน้า About
+================================================== */
+
+.yellow-title {
+
+    display: inline-block;
+
+    background: #fff1a8;
+
+    color: #ee8fbb;
+
+    padding: 10px 25px;
+
+    border-radius: 25px;
+
+    margin: 25px 0;
+
+}
+
+
+.about-text {
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    box-shadow:
+        0 8px 25px rgba(230, 150, 190, 0.15);
+
+    font-size: 17px;
+
+}
+
+
+/* ==================================================
+   กล่องมหาวิทยาลัย
+================================================== */
+
+.blue-box {
+
+    margin: 35px auto;
+
+    max-width: 800px;
+
+    padding: 30px;
+
+    background: #bdebf7;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(90, 190, 220, 0.25);
+
+}
+
+
+.blue-box h2 {
+
+    color: #168eb0;
+
+    margin-bottom: 15px;
+
+}
+
+
+.university {
+
+    background: rgba(255,255,255,0.8);
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+}
+
+
+/* ==================================================
+   หน้า Activity
+================================================== */
+
+.blue-title {
+
+    display: inline-block;
+
+    background: #aee6f5;
+
+    color: #188eae;
+
+    padding: 10px 35px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(70, 190, 220, 0.25);
+
+    margin-bottom: 35px;
+
+}
+
+
+.activity-heading {
+
+    color: #ee8fbb;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* รูปกิจกรรมใหญ่ */
+
+.large-activity-image {
+
+    width: 350px;
+
+    height: 350px;
+
+    margin: 20px auto;
+
+    padding: 8px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(230, 140, 180, 0.2);
+
+}
+
+
+.large-activity-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+}
+
+
+/* ==================================================
+   แกลเลอรีรูป 5 รูป
+================================================== */
+
+.activity-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+.activity-card {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    background: white;
+
+    padding: 5px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 18px rgba(230, 140, 180, 0.18);
+
+}
+
+
+.activity-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+}
+
+
+.activity-description {
+
+    background: white;
+
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+}
+
+
+/* ==================================================
+   หน้า Contact
+================================================== */
+
+.contact-intro {
+
+    font-size: 20px;
+
+    color: #888;
+
+    margin: 20px;
+
+}
+
+
+.contact-box {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(230, 140, 180, 0.18);
+
+    font-size: 20px;
+
+}
+
+
+.contact-box strong {
+
+    color: #e98ab6;
+
+}
+
+
+.contact-message {
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    background: #fff1a8;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    color: #777;
+
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    color: #e596b9;
+
+    margin-top: 30px;
+
+}
+
+
+/* ==================================================
+   ปรับสำหรับโทรศัพท์
+================================================== */
+
+@media (max-width: 768px) {
+
+
+    /* เมนู */
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+
+    }
+
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .menu a {
+
+        font-size: 14px;
+
+        padding: 5px 10px;
+
+    }
+
+
+    /* หัวข้อ */
+
+    .home h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    /* รูป */
+
+    .image-box {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    /* รูปกิจกรรม 5 รูป */
+
+    .activity-gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .large-activity-image {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+}
