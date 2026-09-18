@@ -1,7 +1,6 @@
-/* ================================
-   PORTFOLIO - THANAWADEE
-   สีหลัก : ชมพู / ฟ้า / เหลือง
-================================ */
+/* ==================================================
+   ตั้งค่าพื้นฐานของเว็บไซต์
+   ================================================== */
 
 * {
     box-sizing: border-box;
@@ -9,532 +8,962 @@
     padding: 0;
 }
 
+
 html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
+
 
 body {
     font-family: "Arial", "Tahoma", sans-serif;
-    background: #fff8fc;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5fa,
+            #fffaff,
+            #f5fbff
+        );
+
     color: #555;
+
     min-height: 100vh;
 
-    /* ป้องกันการเลื่อนในแนวนอน */
-    overflow-x: hidden;
+    line-height: 1.8;
 }
 
-/* ================================
-   HEADER / MENU
-================================ */
 
-header {
+/* ==================================================
+   เมนูด้านบน
+   ================================================== */
+
+.navbar {
+
     width: 100%;
-    background: #ffd6e8;
-    padding: 18px 20px;
-    position: relative;
-    z-index: 100;
-    box-shadow: 0 4px 15px rgba(255, 145, 190, 0.2);
-}
 
-nav {
-    max-width: 1100px;
-    margin: auto;
+    min-height: 75px;
+
+    background: rgba(255, 255, 255, 0.95);
 
     display: flex;
-    justify-content: center;
+
+    justify-content: space-between;
+
     align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
+
+    padding: 15px 7%;
+
+    border-bottom:
+        3px solid #ffd3e5;
+
+    box-shadow:
+        0 5px 20px rgba(255, 150, 190, 0.12);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
 }
 
-/* เมนูด้านบนเท่านั้นที่เป็นลิงก์ */
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    background: #ff8fba;
+/* ชื่อเว็บ */
 
-    padding: 11px 25px;
-    border-radius: 30px;
+.logo {
 
-    font-size: 17px;
+    color: #f28bb4;
+
+    font-size: 22px;
+
     font-weight: bold;
 
-    box-shadow: 0 5px 12px rgba(255, 105, 160, 0.2);
-
-    transition: 0.2s;
 }
 
-nav a:hover {
-    background: #ff6fa5;
+
+/* เมนู */
+
+.menu {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+/* เฉพาะเมนูด้านบนเท่านั้นที่เป็นลิงก์ */
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #777;
+
+    background: #fff1f7;
+
+    padding: 7px 16px;
+
+    border-radius: 25px;
+
+    border: 2px solid #ffd4e5;
+
+    transition: 0.25s;
+
+    font-size: 15px;
+
+}
+
+
+/* เมนูเมื่อเอาเมาส์วาง */
+
+.menu a:hover {
+
+    background: #ffd5e6;
+
+    color: #fff;
+
     transform: translateY(-2px);
+
 }
 
-/* ================================
-   MAIN
-================================ */
 
-main {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 45px 25px 70px;
-}
+/* ==================================================
+   หน้าแรก
+   ================================================== */
 
-/* ================================
-   TITLE
-================================ */
+.home-container {
 
-.page-title {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 70px auto;
+
     text-align: center;
-    margin-bottom: 35px;
+
+    padding: 30px;
+
 }
 
-.page-title h1 {
+
+/* หัวข้อหน้าแรก */
+
+.home-container h1 {
+
     display: inline-block;
 
-    background: #9edfff;
-    color: #ffffff;
+    color: #ef82ad;
 
-    padding: 15px 35px;
+    background: #fff;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    border: 3px solid #ffd2e4;
+
+    box-shadow:
+        0 8px 25px rgba(255, 150, 190, 0.15);
+
+    margin-bottom: 35px;
+
+}
+
+
+/* รูปหน้าแรก */
+
+.home-image {
+
+    width: 320px;
+
+    height: 320px;
+
+    margin: 0 auto 35px;
+
+    border-radius: 30px;
+
+    padding: 8px;
+
+    background: #fff;
+
+    border: 4px solid #ffc5dc;
+
+    box-shadow:
+        0 10px 30px rgba(255, 130, 180, 0.2);
+
+}
+
+
+.home-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+}
+
+
+/* ข้อความ */
+
+.home-text {
+
+    background: rgba(255,255,255,0.85);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    border: 2px solid #fbd2e3;
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.home-text p {
+
+    margin: 8px 0;
+
+    font-size: 18px;
+
+    color: #666;
+
+}
+
+
+/* ==================================================
+   หน้า ABOUT
+   ================================================== */
+
+.about-container {
+
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: 50px auto;
+
+    text-align: center;
+
+}
+
+
+/* รูปโปรไฟล์ */
+
+.profile-image {
+
+    width: 270px;
+
+    height: 270px;
+
+    margin: 0 auto 30px;
+
+    padding: 8px;
+
+    background: #fff;
+
+    border: 5px solid #ffbfd9;
+
     border-radius: 30px;
 
     box-shadow:
-        0 0 10px rgba(100, 200, 255, 0.5),
-        0 0 25px rgba(100, 200, 255, 0.3);
+        0 10px 35px rgba(255, 130, 180, 0.2);
 
-    font-size: 30px;
 }
 
-/* ================================
-   HOME
-================================ */
 
-.home {
-    text-align: center;
-}
+.profile-image img {
 
-.home h1 {
-    color: #ff78a9;
-    font-size: 34px;
-    margin-bottom: 25px;
-}
+    width: 100%;
 
-.home-photo {
-    width: 280px;
-    height: 280px;
+    height: 100%;
 
     object-fit: cover;
 
     border-radius: 20px;
 
-    display: block;
-    margin: 0 auto 25px;
+}
 
-    border: 8px solid #ffffff;
+
+/* ==================================================
+   หัวข้อสีเหลืองตัดชมพู
+   ================================================== */
+
+.yellow-title {
+
+    display: inline-block;
+
+    background: #fff2a8;
+
+    color: #ed7fa8;
+
+    padding: 10px 25px;
+
+    border-radius: 25px;
+
+    border: 3px solid #ffbfd7;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==================================================
+   กล่องข้อความ
+   ================================================== */
+
+.info-box {
+
+    margin: 18px auto;
+
+    padding: 18px 25px;
+
+    max-width: 850px;
+
+    border-radius: 25px;
+
+    font-size: 17px;
 
     box-shadow:
-        0 0 15px rgba(255, 143, 186, 0.5);
+        0 7px 20px rgba(0,0,0,0.06);
+
 }
 
-.home p {
-    font-size: 19px;
-    line-height: 2;
-    margin-bottom: 5px;
+
+/* กล่องเหลือง */
+
+.yellow-box {
+
+    background: #fff5b8;
+
+    border: 3px dashed #f3b4c9;
+
+    color: #806b55;
+
 }
 
-.home .name {
-    color: #ff70a6;
-    font-weight: bold;
-    font-size: 22px;
+
+/* กล่องฟ้า */
+
+.blue-box {
+
+    background: #dff5ff;
+
+    border: 3px dashed #9edcf3;
+
+    color: #557888;
+
 }
 
-/* ================================
-   BUTTON ไป ABOUT
-================================ */
 
-.page-button {
+/* กล่องชมพู */
+
+.pink-box {
+
+    background: #ffe5f0;
+
+    border: 3px dashed #f4a8c9;
+
+    color: #76596a;
+
+}
+
+
+/* ==================================================
+   หัวข้อทักษะ
+   ================================================== */
+
+.pink-title {
+
     display: inline-block;
+
+    color: #ef78a8;
+
+    background: #fff;
+
+    border: 3px solid #ffb8d4;
+
+    border-radius: 25px;
+
+    padding: 8px 30px;
 
     margin-top: 25px;
 
-    background: #ff9ec2;
+    margin-bottom: 15px;
+
+}
+
+
+/* กล่องทักษะ */
+
+.skill-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 20px 30px;
+
+    background: #fff1f7;
+
+    border: 3px dashed #f7a9ca;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(255, 130, 180, 0.12);
+
+}
+
+
+/* ==================================================
+   หัวข้อมหาวิทยาลัย
+   ================================================== */
+
+.blue-title {
+
+    display: inline-block;
+
+    color: #fff;
+
+    background: #72cce9;
+
+    padding: 10px 30px;
+
+    border-radius: 25px;
+
+    margin-top: 35px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(80,190,220,0.25);
+
+}
+
+
+/* กล่องมหาวิทยาลัย */
+
+.university-box {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.9);
+
+    border: 3px solid #a9e6f7;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(80,180,220,0.15);
+
+}
+
+
+.university-box h3 {
+
+    color: #55bcd8;
+
+    font-size: 25px;
+
+}
+
+
+.university-box h4 {
+
+    color: #ef8db4;
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.university-box p {
+
+    text-align: left;
+
+    margin: 12px 0;
+
+}
+
+
+/* ==================================================
+   ลิงก์ไปหน้าต่อไป
+   ================================================== */
+
+.next-page {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 10px 25px;
+
+    background: #ffb9d4;
+
     color: white;
 
     text-decoration: none;
 
-    padding: 13px 28px;
+    border-radius: 25px;
 
-    border-radius: 30px;
+    border: 3px solid #ff9fc4;
 
     font-weight: bold;
 
-    box-shadow: 0 6px 15px rgba(255, 120, 170, 0.25);
+    box-shadow:
+        0 7px 20px rgba(255, 120, 170, 0.2);
 
     transition: 0.2s;
+
 }
 
-.page-button:hover {
-    background: #ff79aa;
+
+.next-page:hover {
+
+    background: #f58bb6;
+
+    transform: translateY(-2px);
+
 }
 
-/* ================================
-   ABOUT
-================================ */
 
-.about-photo {
-    width: 260px;
-    height: 260px;
-
-    object-fit: cover;
-
-    display: block;
-    margin: 0 auto 30px;
-
-    border-radius: 25px;
-
-    border: 8px solid white;
-
-    box-shadow:
-        0 0 20px rgba(255, 145, 190, 0.4);
-}
-
-.yellow-title {
-    text-align: center;
-
-    color: #ffffff;
-    background: #ffd95e;
-
-    padding: 15px;
-
-    border-radius: 30px;
-
-    margin-bottom: 20px;
-
-    box-shadow:
-        0 0 15px rgba(255, 213, 80, 0.5);
-}
-
-.info-box {
-    padding: 20px 25px;
-
-    border-radius: 25px;
-
-    margin-bottom: 18px;
-
-    line-height: 1.8;
-
-    font-size: 17px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* กล่องเหลือง */
-
-.box-yellow {
-    background: #fff0a8;
-    border: 3px solid #ffd84d;
-}
-
-/* กล่องฟ้า */
-
-.box-blue {
-    background: #dff6ff;
-    border: 3px solid #8ddcff;
-}
-
-/* กล่องชมพู */
-
-.box-pink {
-    background: #ffe2ee;
-    border: 3px solid #ffabd0;
-}
-
-.info-box strong {
-    color: #ff6fa5;
-}
-
-/* ================================
-   UNIVERSITY
-================================ */
-
-.university {
-    margin-top: 30px;
-}
-
-.university-title {
-    text-align: center;
-
-    display: block;
-
-    color: #ffffff;
-    background: #63c9f3;
-
-    padding: 15px 25px;
-
-    border-radius: 30px;
-
-    font-size: 25px;
-    font-weight: bold;
-
-    box-shadow:
-        0 0 12px rgba(80, 200, 245, 0.6),
-        0 0 25px rgba(80, 200, 245, 0.35);
-
-    margin-bottom: 20px;
-}
-
-.university-box {
-    background: #f0fbff;
-
-    border: 3px solid #91ddfa;
-
-    padding: 25px;
-
-    border-radius: 25px;
-
-    line-height: 1.9;
-
-    font-size: 18px;
-
-    margin-bottom: 25px;
-}
-
-.university-box h3 {
-    color: #28aede;
-    margin-bottom: 5px;
-}
-
-/* ================================
+/* ==================================================
    ACTIVITY
-================================ */
+   ================================================== */
 
-.activity-section {
-    margin-bottom: 45px;
-}
+.activity-container {
 
-.section-title {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 50px auto;
+
     text-align: center;
 
-    color: white;
-    background: #78d5f5;
+}
 
-    padding: 13px 25px;
+
+/* หัวข้อผลงาน */
+
+.activity-title {
+
+    display: inline-block;
+
+    color: #4faac6;
+
+    background: #e3f8ff;
+
+    padding: 12px 35px;
 
     border-radius: 30px;
 
+    border: 3px solid #9bdff1;
+
     box-shadow:
-        0 0 15px rgba(90, 205, 245, 0.5);
+        0 10px 35px rgba(70,190,220,0.2);
 
     margin-bottom: 25px;
+
 }
+
+
+/* หัวข้อกิจกรรม */
+
+.activity-subtitle {
+
+    color: #ef82ad;
+
+    margin: 15px 0 25px;
+
+}
+
+
+/* ==================================================
+   Grid กิจกรรม
+   4 รูป = 2 x 2
+   ================================================== */
 
 .activity-grid {
+
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 25px;
+    gap: 30px;
+
+    margin-bottom: 50px;
+
 }
+
+
+/* กล่องกิจกรรม */
 
 .activity-card {
-    background: white;
 
-    border: 3px solid #ffc1dc;
-
-    border-radius: 25px;
+    background: #fff;
 
     padding: 15px;
 
-    box-shadow: 0 7px 20px rgba(255, 135, 180, 0.15);
+    border-radius: 25px;
+
+    border: 3px solid #ffd1e3;
+
+    box-shadow:
+        0 10px 30px rgba(255,130,180,0.12);
+
 }
 
+
+/* รูปกิจกรรม */
+
 .activity-card img {
+
     width: 100%;
-    aspect-ratio: 1 / 1;
+
+    height: 300px;
 
     object-fit: cover;
 
     border-radius: 18px;
 
-    display: block;
-
-    margin-bottom: 15px;
 }
+
+
+/* ข้อความกิจกรรม */
 
 .activity-card p {
-    line-height: 1.7;
-    font-size: 16px;
+
+    text-align: left;
+
+    padding: 15px 5px 5px;
+
+    font-size: 15px;
+
 }
 
-.activity-card strong {
-    color: #ff6fa5;
+
+/* ==================================================
+   เกียรติบัตร
+   ================================================== */
+
+.certificate-title {
+
+    display: inline-block;
+
+    color: #ef82ad;
+
+    background: #fff1f7;
+
+    border: 3px solid #ffb8d4;
+
+    padding: 10px 35px;
+
+    border-radius: 30px;
+
+    margin-bottom: 25px;
+
 }
 
-/* ================================
-   CERTIFICATE
-================================ */
+
+/* 2 รูปในบรรทัดเดียว */
 
 .certificate-grid {
+
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 25px;
+    gap: 30px;
+
 }
 
+
+/* กล่องเกียรติบัตร */
+
 .certificate-card {
-    background: #fff4fa;
 
-    border: 3px solid #ffb5d3;
-
-    border-radius: 25px;
+    background: white;
 
     padding: 15px;
 
-    text-align: center;
+    border-radius: 25px;
 
-    box-shadow: 0 7px 20px rgba(255, 130, 180, 0.15);
+    border: 3px dashed #a9dff0;
+
+    box-shadow:
+        0 8px 25px rgba(100,180,220,0.12);
+
 }
+
+
+/* รูปเกียรติบัตร */
 
 .certificate-card img {
+
     width: 100%;
 
-    aspect-ratio: 1 / 1;
+    height: 300px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    border-radius: 18px;
+    border-radius: 15px;
 
-    margin-bottom: 12px;
 }
 
-.certificate-card p {
-    line-height: 1.6;
-}
 
-/* ================================
+/* ==================================================
    CONTACT
-================================ */
+   ================================================== */
 
-.contact {
+.contact-container {
+
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 70px auto;
+
     text-align: center;
+
 }
 
-.contact-intro {
-    font-size: 20px;
-    margin-bottom: 25px;
-}
 
-.contact-box {
-    max-width: 600px;
+.contact-container h1 {
 
-    margin: 0 auto 30px;
+    display: inline-block;
 
-    background: #fff0f7;
+    background: #ffe2ef;
 
-    border: 3px solid #ffb4d4;
+    color: #ee76a7;
+
+    padding: 12px 30px;
 
     border-radius: 30px;
+
+    border: 3px solid #ffb5d2;
+
+}
+
+
+.contact-intro {
+
+    font-size: 19px;
+
+    margin: 25px 0;
+
+}
+
+
+/* กล่องข้อมูลติดต่อ */
+
+.contact-box {
+
+    background: #fff;
 
     padding: 30px;
 
-    font-size: 20px;
-    line-height: 2;
+    border-radius: 30px;
+
+    border: 3px solid #b5e8f7;
 
     box-shadow:
-        0 0 20px rgba(255, 140, 185, 0.2);
+        0 10px 35px rgba(70,180,220,0.15);
+
+    margin-bottom: 30px;
+
 }
+
+
+.contact-box p {
+
+    font-size: 20px;
+
+    margin: 10px;
+
+}
+
 
 .contact-box strong {
-    color: #ff6c9f;
+
+    color: #ef78a8;
+
 }
 
-.contact-photo {
-    width: 280px;
-    height: 280px;
+
+/* รูปติดต่อ */
+
+.contact-image {
+
+    width: 300px;
+
+    height: 300px;
+
+    margin: auto;
+
+    padding: 8px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    border: 4px solid #ffc3dc;
+
+}
+
+
+.contact-image img {
+
+    width: 100%;
+
+    height: 100%;
 
     object-fit: cover;
 
-    border-radius: 25px;
+    border-radius: 22px;
 
-    border: 8px solid white;
-
-    box-shadow:
-        0 0 20px rgba(255, 145, 190, 0.4);
 }
 
-/* ================================
-   FOOTER
-================================ */
 
-footer {
-    text-align: center;
-
-    padding: 25px;
-
-    background: #ffdce9;
-
-    color: #ff70a6;
-
-    font-size: 15px;
-}
-
-/* ================================
-   MOBILE
-================================ */
+/* ==================================================
+   Responsive สำหรับโทรศัพท์
+   ================================================== */
 
 @media (max-width: 700px) {
 
-    nav {
-        gap: 8px;
+
+    /* เมนู */
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px 10px;
+
     }
 
-    nav a {
-        padding: 9px 15px;
-        font-size: 14px;
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
     }
 
-    main {
-        padding: 30px 15px 50px;
+
+    .menu a {
+
+        font-size: 13px;
+
+        padding: 5px 11px;
+
     }
 
-    .page-title h1 {
-        font-size: 24px;
+
+    /* หน้าแรก */
+
+    .home-container {
+
+        margin-top: 35px;
+
+        padding: 10px;
+
     }
 
-    .home h1 {
-        font-size: 27px;
+
+    .home-container h1 {
+
+        font-size: 23px;
+
     }
 
-    .home-photo,
-    .contact-photo {
-        width: 230px;
-        height: 230px;
+
+    .home-image {
+
+        width: 250px;
+
+        height: 250px;
+
     }
+
+
+    /* About */
+
+    .profile-image {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+
+    .university-box p {
+
+        text-align: left;
+
+        font-size: 15px;
+
+    }
+
+
+    /* กิจกรรม */
 
     .activity-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+
+        grid-template-columns: 1fr;
+
     }
+
 
     .certificate-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+
+        grid-template-columns: 1fr;
+
     }
 
-    .activity-card,
-    .certificate-card {
-        padding: 10px;
+
+    .activity-card img {
+
+        height: 280px;
+
     }
 
-    .activity-card p,
-    .certificate-card p {
-        font-size: 14px;
+
+    .certificate-card img {
+
+        height: auto;
+
+        max-height: 350px;
+
     }
 
-    .info-box {
-        font-size: 16px;
-        padding: 17px;
+
+    /* Contact */
+
+    .contact-image {
+
+        width: 250px;
+
+        height: 250px;
+
     }
+
 }
